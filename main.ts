@@ -15,8 +15,8 @@ interface Options {
 }
 
 
-const getCampground = async (campground: Campground, options: Options): Promise<null | AxiosResponse> =>  {
-    console.log(`Searching campground ${campground.id}`);
+const getCampgroundAsync = async (campground: Campground, options: Options): Promise<null | AxiosResponse> =>  {
+    console.log(`Searching campground ${campground.id} from ${options.startDate} to ${options.endDate}`);
     try {
         return await axios({
             method: 'post',
@@ -53,7 +53,7 @@ const campgroundIsAvailable = (campgroundAvailability, options) => {
 
 const main = async ()  => {
     // Get campground availability
-    const availability = await getCampground(carpinteriaSantaCruz, {startDate: "2023-01-30", endDate: "2023-01-31"});
+    const availability = await getCampgroundAsync(carpinteriaSantaCruz, {startDate: "2023-01-30", endDate: "2023-01-31"});
     const campgrounds = availability["Facility"]["Units"];
 
     // Turn Object of campground id keys into array, [ {campground}, {campground}, etc. ]
