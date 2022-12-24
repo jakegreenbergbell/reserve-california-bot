@@ -1,7 +1,12 @@
 {
   "dependencies": {
     "axios": "^1.2.1",
+    "dotenv": "^16.0.3",
     "find-campsite": "^1.2.3",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "twilio": "^3.84.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17"
   }
 }

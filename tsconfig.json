@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
       "target": "es6",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
       "module": "commonjs",
-      "sourceMap": true
+      "sourceMap": true,
+      "types": ["node", "twilio"]
     }
   }
