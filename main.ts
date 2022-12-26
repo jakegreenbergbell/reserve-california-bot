@@ -54,8 +54,8 @@ const isCampgroundAvailableAsync = async () : Promise<boolean> =>  {
         'c' : "Carpinteria Santa Cruz",
         'start': "2023-01-29",
         'end': "2023-01-30",
-        'from': "+13854693473",
-        'to': "+15105047984"
+        'from': process.env.TWILIO_PHONE_NUMBER_FROM,
+        'to': process.env.PHONE_NUMBER_TO
     })
     .argv;
     
