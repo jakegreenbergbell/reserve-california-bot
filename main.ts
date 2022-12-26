@@ -96,8 +96,8 @@ const isCampgroundAvailableAsync = async () : Promise<boolean> =>  {
         // Send a text message alert!
         const accountSid = process.env.TWILIO_ACCOUNT_SID;
         const authToken = process.env.TWILIO_AUTH_TOKEN;
-        const phoneNumberFrom = process.env.TWILIO_PHONE_NUMBER_FROM;
-        const phoneNumbnerTo = process.env.TWILIO_PHONE_NUMBER_TO;
+        const phoneNumberFrom = argv.from;
+        const phoneNumbnerTo = argv.to;
         const client = new Twilio(accountSid, authToken);
 
         client.messages
