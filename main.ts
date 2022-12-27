@@ -131,9 +131,9 @@ const isCampgroundAvailableAsync = async () : Promise<boolean> =>  {
         const phoneNumbnerTo = argv.to;
         const client = new Twilio(accountSid, authToken);
 
-        // client.messages
-        // .create({ body: `${allAvailableCampgroundsDataNeeded.length} campgrounds available! woohoo!`, from: phoneNumberFrom, to: phoneNumbnerTo })
-        // .then(message => console.log(message.sid));
+        client.messages
+        .create({ body: `${allAvailableCampgroundsDataNeeded.length} campgrounds available! woohoo!`, from: phoneNumberFrom, to: phoneNumbnerTo })
+        .then(message => console.log(message.sid));
 
         return true;
     } else {
