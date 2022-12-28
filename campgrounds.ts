@@ -1,6 +1,10 @@
 import {Campground} from './types'
 
-export const campgroundDirectory = {
+interface campgroundDirectoryType {
+    [key: string]: Campground;
+  }
+
+export const campgroundDirectory: campgroundDirectoryType = {
     "Carpinteria Santa Cruz" : {
         id: 358,
         name: "Carpinteria Santa Cruz"
