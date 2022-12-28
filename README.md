@@ -24,8 +24,8 @@ ts-node main.ts
 ## Options
 `ts-node main.ts` can be customized for campgrounds, start date, end date, Twilio from number, and phone number to send alerts.   
 
--c, -campground : current options are listed in `campgrounds.ts`   
--s, -start : check-in date "YYYY-MM-DD"    
--e, -end : check-out date "YYYY-MM-DD"   
--f, -from : phone number to send the alert from (can be found in Twilio account)   
--t, -to : phone number to send alert to    
+`-c, -campground` : all the campgrounds to check for, e.g. `-c "Big Sur Main Camp" "Big Sur South Camp" "Big Sur Weyland Camp"` to check for all campground areas in Pfeiffer Big Sur State Park, current options are listed in `campgrounds.ts`
+`-s, -start` : check-in date "YYYY-MM-DD"    
+`-e, -end` : check-out date "YYYY-MM-DD"   
+`-f, -from` : phone number to send the alert from (can be found in Twilio account)   
+`-t, -to` : phone number to send alert to    
